@@ -1,0 +1,123 @@
+*:first-letter {
+	text-transform: uppercase;
+}
+
+.container {
+	margin-top: 1%;
+	width: 600px;
+}
+
+body {
+	background-color: #008cba;
+}
+
+form, h3, h5 {
+	margin: 0;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+.btn {
+	transition: .2s;
+}
+
+.btn-group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-group .btn {
+	text-transform: uppercase;
+}
+
+.btn-group h2.field-label {
+	margin: 0;
+	font-weight: normal;
+}
+
+.btn-group .film-select {
+	flex-grow: 1;
+	display: flex;
+	margin-right: 1%;
+}
+
+.btn-group .film-select select {
+	flex-grow: 1
+}
+
+.filter-form {
+	display: flex;
+}
+
+.filter-form input:last-child {
+	flex-grow: 1
+}
+
+.form-group {
+	margin: 0;
+}
+
+.form-control[name=filter] {
+	border-color: #fff;
+}
+
+.film {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.film div:first-child {
+	width: 50%;
+	align-self: flex-start;
+}
+
+.film div:last-child {
+	flex-grow: 1
+}
+
+.actor-list .field-label {
+	margin-left: 2%;
+}
+
+.actor-name {
+	line-height: 30px;
+	display: block;
+}
+
+.actor-name:hover::after {
+	content: url(/pen.png);
+	display: inline-block;
+	margin-left: 2%;
+}
+
+.field-label {
+	font-weight: 400;
+}
+
+.field-label span {
+	margin-left: 2%;
+}
+
+.panel-primary {
+	box-shadow: 0 0 40px #eee
+}
+
+.panel-heading h1 {
+	font-family: "Sports";
+	text-align: center;
+	font-size: 3.5em;
+	margin-bottom: 4%;
+}
+
+.delete-btn:hover {
+	
+}
+
+@font-face {
+	font-family: 'Sports';
+	src: url(../static/sports.ttf);
+}
