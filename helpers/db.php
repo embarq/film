@@ -57,7 +57,9 @@
 	}
 
 	function insert_into($table, $dataset) {
-		$quotify = function($item) {return "'$item'";}
+		$quotify = function($item) {
+			return "'$item'";
+		};
 		$fields = join(array_keys($dataset), ', ');
 		$values = join(array_map($quotify, array_values($dataset)), ', ');
 
