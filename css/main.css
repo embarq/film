@@ -8,7 +8,8 @@
 }
 
 body {
-	background-color: #008cba;
+	background-color: #008cba;	/*yeti*/
+	background-color: #333;			/*slate*/
 }
 
 form, h3, h5 {
@@ -88,12 +89,6 @@ form, h3, h5 {
 	display: block;
 }
 
-.actor-name:hover::after {
-	content: url(/pen.png);
-	display: inline-block;
-	margin-left: 2%;
-}
-
 .field-label {
 	font-weight: 400;
 }
@@ -103,7 +98,8 @@ form, h3, h5 {
 }
 
 .panel-primary {
-	box-shadow: 0 0 40px #eee
+	box-shadow: 0 0 40px #eee;	/*yeti*/
+	box-shadow: 0 0 40px #555;	/*slate*/
 }
 
 .panel-heading h1 {
@@ -111,10 +107,6 @@ form, h3, h5 {
 	text-align: center;
 	font-size: 3.5em;
 	margin-bottom: 4%;
-}
-
-.delete-btn:hover {
-	
 }
 
 @font-face {

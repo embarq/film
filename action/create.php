@@ -22,7 +22,7 @@ if ($_POST) {
 <head>
 	<title>Filmzilla</title>
 	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/yeti.bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/css/slate.bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
@@ -34,8 +34,8 @@ if ($_POST) {
 					<div class="btn-group">
 						<h2 class="field-label">New <?php echo substr($set, 0, -1) ?></h2>
 						<div>
-							<input type="submit" class="btn btn-primary" value="Save" />
-							<a href="/index.php" class="btn btn-primary">Cancel</a>
+							<input type="submit" class="btn btn-danger" value="Save" />
+							<a href="/index.php" class="btn btn-danger">Cancel</a>
 						</div>
 					</div>
 				</div> <!-- panel-heading -->
@@ -45,7 +45,7 @@ if ($_POST) {
 							$type = $key === 'film' ? 'text' : get_value_type($value);
 							echo "<div class='form-group'>";
 							echo component('label', "for='$key'", 
-								component('h4', 'class="text-primary film-info-label"', $key));
+								component('h4', 'class="text-danger film-info-label"', $key));
 							echo component('input', 
 								"type='$type' class='form-control' name='$key' required placeholder='$value'", '');
 							echo "</div>";

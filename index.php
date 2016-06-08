@@ -15,7 +15,7 @@ else $id = 1;
 <head>
 	<title>Filmzilla</title>
 	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/yeti.bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/slate.bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -27,7 +27,7 @@ else $id = 1;
 				<!-- toolbar -->
 					<!-- dropdown of films -->
 					<form action="<?php $_PHP_SELF ?>" class="film-select" method="POST">
-						<select name="film" class="film-list btn btn-primary" onchange="this.form.submit()">
+						<select name="film" class="film-list btn btn-default" onchange="this.form.submit()">
 							<option selected disabled>Choose Film</option>
 							<?php foreach ($films as $film) {
 								echo option_component($film['id'], $film['title'], ($film['id'] == $id) ? 'selected' : '');
@@ -37,28 +37,28 @@ else $id = 1;
 					<div class="btn-group">
 						<!-- add-dropdown -->
 						<span class="btn-group">
-							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add  <span class="caret"></span></button>
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Add  <span class="caret"></span></button>
 							<ul class="dropdown-menu add-list" role="menu">
 								<li><a href="action/create.php?set=films">Film</a></li>
 								<li><a href="action/create.php?set=actors&amp;id=<?php echo $id ?>">Actor</a></li>
 							</ul>
 						</span>
-						<a href="action/update.php?set=films&amp;id=<?php echo $id ?>" class="btn btn-primary">Edit</a>
+						<a href="action/update.php?set=films&amp;id=<?php echo $id ?>" class="btn btn-danger">Edit</a>
 						<!-- filter-dropdown -->
 						<span class="btn-group">
-							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter  <span class="caret"></span></button>
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Filter  <span class="caret"></span></button>
 							<ul class="dropdown-menu add-list" role="menu">
 								<li>
 									<form action="<?php $_PHP_SELF ?>" method="POST">
 										<div class="filter-form">
 											<input type="text" name="filter" class="form-control" placeholder="Film title" />
-											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-filter"></span></button>
+											<button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-filter"></span></button>
 										</div>
 									</form>
 								</li>
 							</ul>
 						</span>						
-						<a href="action/delete.php?set=films&amp;id=<?php echo $id; ?>" class="btn btn-primary delete-btn">Delete</a>
+						<a href="action/delete.php?set=films&amp;id=<?php echo $id; ?>" class="btn btn-danger delete-btn">Delete</a>
 					</div>
 				</div> 
 				<!-- toolbar -->
